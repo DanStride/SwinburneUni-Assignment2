@@ -1,0 +1,35 @@
+.formContainer {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 1em 1em 1em 1em;
+    padding: 1em;
+    width: 80%;
+}
+
+.formButton {
+    margin: 1em 0 0 0;
+    height: 3em;
+    width: 6em;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: rgb(168, 46, 46);
+    transition: all 0.3s;
+}
+
+.formButton:hover {
+    cursor: pointer;
+    background: rgb(24,28,42);
+    border: 1px solid rgb(168, 46, 46);
+    color: white;
+}
+
+#enquiry {
+    height: 100px;
+    width: 100%;
+}
+
+input {
+    display: block;
+}
