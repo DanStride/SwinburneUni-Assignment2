@@ -2,7 +2,36 @@ import React, { Component } from 'react';
 
 import './Aside.css';
 
-function Aside() {
+function Aside(props) {
+
+    const matchesData = props.matchesData;
+    const injuriesData = props.injuriesData;
+
+    let matchesRows = [];
+    let injuriesRows = [];
+
+    for (let row of matchesData) {
+        let newRow = (
+            <tr>
+                <td key={row.date}>{row.date}</td>
+                <td key={row.opponent}>{row.opponent}</td>
+                <td key={row.location}>{row.location}</td>
+            </tr>
+        )
+        matchesRows.push(newRow);
+    }
+
+    for (let row of injuriesData) {
+        let newRow = (
+            <tr>
+                <td key={row.player}>{row.player}</td>
+                <td key={row.injury}>{row.injury}</td>
+                <td key={row.return}>{row.return}</td>
+            </tr>
+        )
+        injuriesRows.push(newRow);
+    }
+
     return (
         <div className='asideBody'>
             <table>
@@ -12,26 +41,7 @@ function Aside() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Fri 3/3</td>
-                        <td>West Coast Eagles</td>
-                        <td>MCG</td>
-                    </tr>
-                    <tr>
-                        <td>Sat 11/3</td>
-                        <td>Essendon</td>
-                        <td>MCG</td>
-                    </tr>
-                    <tr>
-                        <td>Sat 18/3</td>
-                        <td>Collingwood</td>
-                        <td>MCG</td>
-                    </tr>
-                    <tr>
-                        <td>Sat 25/3</td>
-                        <td>Brisbane</td>
-                        <td>Gabba</td>
-                    </tr>
+                    {matchesRows}
                 </tbody>
             </table>
             <table>
@@ -41,16 +51,7 @@ function Aside() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Big Sam</td>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                    </tr>
-                    <tr>
-                        <td>Little John</td>
-                        <td>Torn Hamstring</td>
-                        <td>3 weeks</td>
-                    </tr>
+                    {injuriesRows}
                 </tbody>
             </table>
             <a class="weatherwidget-io" href="https://forecast7.com/en/n37d81144d96/melbourne/" data-label_1="MELBOURNE"
