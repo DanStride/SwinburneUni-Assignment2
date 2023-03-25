@@ -4,9 +4,9 @@ import './Footer.css';
 function Footer() {
     return (
         <footer>
-            <text>Copyright © 2023 Daniel Stride</text>
-            <text class="footer-button" id="privacy-policy-button">Privay Policy</text>
-            <text>Terms and Conditions</text>
+            <span>Copyright © 2023 Daniel Stride</span>
+            <span className="footer-button" id="privacy-policy-button">Privay Policy</span>
+            <span>Terms and Conditions</span>
         </footer>
     )
 }

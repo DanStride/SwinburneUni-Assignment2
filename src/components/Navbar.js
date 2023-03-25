@@ -14,7 +14,7 @@ function Navbar() {
             <button className={styles.navButton}><a href="#photo-gallery">Gallery</a></button>
             <button className={styles.navButton}><a href="#enquiry-form">Enquiry</a></button>
             <button className={styles.navButton}><a href="#training-and-travel">Training</a></button>
-            <button className={styles.drawerButton}><i class="fa-solid fa-bars"></i></button>
+            <button className={styles.drawerButton}><i className="fa-solid fa-bars"></i></button>
         </nav>
         </div>
     )

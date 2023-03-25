@@ -5,6 +5,8 @@ import Sidebar from './main/Aside';
 import Enquiry from './main/Enquiry';
 import {articleData, matchesTable, injuriesTable, galleryImages, galleryVideos} from '../data/dummydata';
 
+import { v4 as uuid } from "uuid";
+
 import styles from './Main.module.css';
 
 function Main() {
@@ -12,8 +14,8 @@ function Main() {
     const articles = articleData.filter(item => item.type == "article");
     const training = articleData.filter(item => item.type == "training");
     
-    const renderedArticles = articles.map(ar => <Article data={ar} />);
-    const renderedTraining = training.map(tr => <Article data={tr} />);
+    const renderedArticles = articles.map(ar => <Article key={uuid()} data={ar} />);
+    const renderedTraining = training.map(tr => <Article key={uuid()} data={tr} />);
 
     return (
         <div className={styles.container}>
