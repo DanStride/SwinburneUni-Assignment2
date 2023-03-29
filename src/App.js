@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import { ErrorBoundary } from 'react-error-boundary';
+
 import './App.css';
 
 class App extends Component {
@@ -10,16 +12,19 @@ class App extends Component {
     this.state = { asideOpen: true };
     this.toggleAside = this.toggleAside.bind(this);
   }
+
   toggleAside() {
     this.setState(st => ({ asideOpen: !st.asideOpen }));
   }
-  render() {
 
+  render() {
     return (
       <div className="App" >
-        <Navbar toggleAside={this.toggleAside}/>
-        <Main asideOpen={this.state.asideOpen}/>
-        <Footer />
+        <ErrorBoundary>
+          <Navbar toggleAside={this.toggleAside} />
+          <Main asideOpen={this.state.asideOpen} />
+          <Footer />
+        </ErrorBoundary>
       </div>
     );
   }

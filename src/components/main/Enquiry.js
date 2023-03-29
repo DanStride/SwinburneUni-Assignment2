@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Enquiry.css';
+const sanitize = require("string-sanitizer");
 
 class Enquiry extends Component {
     constructor(props) {
@@ -8,13 +9,32 @@ class Enquiry extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
+
     handleChange(evt) {
-        this.setState({ [evt.target.name]: evt.target.value });
+        try {
+            this.setState({ [evt.target.name]: evt.target.value });
+        }
+        catch {
+            console.log('Something went wrong updating the state with user input.')
+        }
     };
+
     submitForm(evt) {
-        evt.preventDefault();
-        alert(`Form submitted with email: ${this.state.email} and the enquiry: ${this.state.enquiry}`);
-        this.setState({ enquiry: "", email: "" });
+        try {
+            evt.preventDefault();
+            if (sanitize.validate.isEmail(this.state.email)) {
+                const newEnquiry = {
+                    email: this.state.email,
+                    enquiry: sanitize.sanitize(this.state.enquiry)
+                }
+                alert(`Form submitted with email: ${newEnquiry.email} and the enquiry: ${newEnquiry.enquiry}`)
+                this.setState({ enquiry: "", email: "" });
+            } else {
+                alert('You must enter a correct email address!')
+            }
+        } catch {
+            console.log('Something went wrong processing the enquiry.')
+        }
     };
 
     render() {
@@ -25,7 +45,7 @@ class Enquiry extends Component {
                     <label htmlFor="email">Your Email:</label>
                     <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} required />
                     <label htmlFor="enquiry">Your Enquiry:</label>
-                    <input type="text" id="enquiry" name="enquiry" value={this.state.enquiry} onChange={this.handleChange} required />
+                    <textarea type="textarea" id="enquiry" name="enquiry" value={this.state.enquiry} onChange={this.handleChange} required />
                     <button className="formButton">Submit</button>
                 </form>
             </div>

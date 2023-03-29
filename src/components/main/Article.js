@@ -4,7 +4,6 @@ import './Article.css';
 
 export class Article extends Component {
     render() {
-        // console.log(this.props)
         return (
             <div className='articleContainer'>
                 <h2>{this.props.data.heading}</h2>

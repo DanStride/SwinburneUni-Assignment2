@@ -7,7 +7,6 @@ const EnhancedComponent = (OriginalComponent) => {
     addUpvote = () => {
       this.setState({ upvotes: this.state.upvotes + 1});
     }
-  
 
     render() {
       return (

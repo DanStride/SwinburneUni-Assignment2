@@ -28,6 +28,8 @@
 #enquiry {
     height: 100px;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
 }
 
 input {
