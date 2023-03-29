@@ -5,3 +5,15 @@
     margin: 1em 1em 1em 1em;
     padding: 1em;
 }
+
+.articleUpvote {
+    cursor: pointer;
+    margin: 1em;
+}
+
+.upvoteContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
