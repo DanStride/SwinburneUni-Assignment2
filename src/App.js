@@ -13,6 +13,7 @@ class App extends Component {
     this.toggleAside = this.toggleAside.bind(this);
   }
 
+  // This function is called via hamburger icon in navbar, to set visibility on/off for the aside section.
   toggleAside() {
     this.setState(st => ({ asideOpen: !st.asideOpen }));
   }

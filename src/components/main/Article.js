@@ -3,6 +3,9 @@ import EnhancedComponent from '../upvote/upvote';
 import './Article.css';
 
 export class Article extends Component {
+
+    // Article class uses data passed into its props to populate heading and article tags
+    // The upvote count and add-method props are added via the EnhancedComponent wrapping the class
     render() {
         return (
             <div className='articleContainer'>

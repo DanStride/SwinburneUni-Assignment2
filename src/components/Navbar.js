@@ -18,6 +18,8 @@ class Navbar extends Component {
                     <button className={styles.navButton}><a href="#photo-gallery">Gallery</a></button>
                     <button className={styles.navButton}><a href="#enquiry-form">Enquiry</a></button>
                     <button className={styles.navButton}><a href="#training-and-travel">Training</a></button>
+                    
+                    // This event handler on this button calls a method on the parent component
                     <button className={styles.drawerButton} onClick={this.props.toggleAside}><i className="fa-solid fa-bars"></i></button>
                 </nav>
             </div>
