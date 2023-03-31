@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SwinburneUni-Assignment2/static/css/main.b0f0021b.css",
+    "main.js": "/SwinburneUni-Assignment2/static/js/main.8aefc864.js",
+    "static/js/787.889ef63f.chunk.js": "/SwinburneUni-Assignment2/static/js/787.889ef63f.chunk.js",
+    "index.html": "/SwinburneUni-Assignment2/index.html",
+    "main.b0f0021b.css.map": "/SwinburneUni-Assignment2/static/css/main.b0f0021b.css.map",
+    "main.8aefc864.js.map": "/SwinburneUni-Assignment2/static/js/main.8aefc864.js.map",
+    "787.889ef63f.chunk.js.map": "/SwinburneUni-Assignment2/static/js/787.889ef63f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0f0021b.css",
+    "static/js/main.8aefc864.js"
+  ]
+}
