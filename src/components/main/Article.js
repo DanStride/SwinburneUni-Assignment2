@@ -14,7 +14,7 @@ export class Article extends Component {
                     {this.props.data.body}
                 </article>
                 <div className='upvoteContainer'>
-                    <i class="fa-regular fa-thumbs-up fa-lg articleUpvote" onClick={this.props.addUpvote}></i>
+                    <i className="fa-regular fa-thumbs-up fa-lg articleUpvote" onClick={this.props.addUpvote}></i>
                     <span>{this.props.upvotes}</span>
                 </div>
             </div>

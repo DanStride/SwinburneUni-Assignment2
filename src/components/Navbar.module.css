@@ -82,4 +82,20 @@
     color: white;
 }
 
+@media (max-width: 1190px) {
+    .bannerHeading {
+        font-size: 2em;
+    }
+  }
 
+  @media (max-width: 1080px) {
+    .bannerHeading {
+        font-size: 1.5em;
+    }
+  }
+
+  @media (max-width: 990px) {
+    .bannerHeading {
+        font-size: 0em;
+    }
+  }

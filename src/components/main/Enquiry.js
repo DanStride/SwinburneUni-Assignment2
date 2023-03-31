@@ -44,6 +44,8 @@ class Enquiry extends Component {
                 // To simulate posting the enquiry object, 
                 // the browser will alert the user of the data which would be sent
                 alert(`Form submitted with email: ${newEnquiry.email} and the enquiry: ${newEnquiry.enquiry}`)
+
+                // Reset the form
                 this.setState({ enquiry: "", email: "" });
             } else {
 

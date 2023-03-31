@@ -27,9 +27,10 @@ class Main extends Component {
             const training = articleData.filter(item => item.type == "training");
 
             // State is updated with arrays of Article and Training components built from the previously filtered data
-            // and a unique key attribute from the uuid library
-            this.setState({ renderedArticles: articles.map(ar => <Article key={uuid()} data={ar} />)});
-            this.setState({ renderedTraining: training.map(tr => <Article key={uuid()} data={tr} />)});
+            // and a unique key attribute from the uuid library.
+            // After setting state, an anonymous callback runs, to log to the console that the data was loaded.
+            this.setState({ renderedArticles: articles.map(ar => <Article key={uuid()} data={ar} />)}, () => console.log('Loaded articles'));
+            this.setState({ renderedTraining: training.map(tr => <Article key={uuid()} data={tr} />)}, () => console.log('Loaded training'));
         } catch {
             // If the process fails for some reason, an informative message is logged to the console
             console.log('Data was unable to be processed into article components. Check data repository.')
@@ -38,7 +39,7 @@ class Main extends Component {
 
     render() {
         return (
-            <div className={styles.container}>
+            <div className={styles.container} id='mainDiv'>
                 <div className={styles.mainBody}>
                     {this.state.renderedArticles}
                     <Gallery images={galleryImages} videos={galleryVideos} />
