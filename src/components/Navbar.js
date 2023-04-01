@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import styles from './Navbar.module.css';
 
 class Navbar extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
     render() {
         return (
             <div className={styles.container}>
                 <div className={styles.logoContainer}>
-                    <img className={styles.headingLogo} src="https://content.foxsports.com.au/ott/afl/2017/teams/752/20010_752_home.png" />
+                    <img className={styles.headingLogo} src="https://content.foxsports.com.au/ott/afl/2017/teams/752/20010_752_home.png" alt="Melbourne FC Logo"/>
                     <h1 className={styles.bannerHeading}>Melbourne Football Club</h1>
                 </div>
                 <nav className={styles.navBar}>

@@ -23,8 +23,8 @@ class Main extends Component {
         try {
             // dummydata.js is used to simulate incoming data from a database.
             // Data is filtered into new variables depending on the value of its "type"
-            const articles = articleData.filter(item => item.type == "article");
-            const training = articleData.filter(item => item.type == "training");
+            const articles = articleData.filter(item => item.type === "article");
+            const training = articleData.filter(item => item.type === "training");
 
             // State is updated with arrays of Article and Training components built from the previously filtered data
             // and a unique key attribute from the uuid library.

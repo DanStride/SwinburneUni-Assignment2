@@ -6,13 +6,13 @@ This project is for the Swinburne University Programming and Development Graduat
 It is a functioning single page web application built with React. 
 
 The website is designed to be the central point of communication for the Melbourne Football Club and its features include:
-Weather
-Training and Travel Information
-Photo and Video Gallery
-Injury Table
-Upcoming Matches Table
-News
-Privacy Statement
+- Weather
+- Training and Travel Information
+- Photo and Video Gallery
+- Injury Table
+- Upcoming Matches Table
+- News
+- Privacy Statement
 
 The information contained within the website is placeholder data, and all images were used without permission.
 Anyone who views the website must be in agreeance that the Melbourne Football Club is the greatest club of all time, 
